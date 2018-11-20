@@ -89,15 +89,103 @@ int main(void)
 	printf("%d", period);
 	
 	return 0;
-}```
+}
+```
 ## 3-1
-ㅇㄹ 
+탕수육을 서로 번갈아 가면서 말하게 되는 탕수육 게임입니다.
+
+
 ## 3-2
 ㅇㄹ 
 ## 4-1
-ㅇㄹ 
+이런 유형의 문제는 과일의 인덱스를 식별번호로 하고, 그에 대한 정보를 인덱스에 맞추어서 해결하는 것이 좋습니다.
+
+모든 경우에 대하여 두 과일을 서로 비교하고 크기가 큰 과일이 순서에서 한 단계 커지는 (순서가 미루어지는) 모습을 그려내면 됩니다.
+그리고 출력할 때에는 과일 순서에 대한 정보를 이용하여 올바르게 출력해냅니다.
+```C
+#include <stdio.h>
+
+int main(void)
+{
+	int len_fruit = 0;
+	int fruit[100] = { 0, };
+	int fruit_order[100] = { 0, };
+	
+	scanf("%d", &len_fruit);
+	
+	int i = 0, j = 0;
+	for (i = 0; i < len_fruit; i++)
+	{
+		scanf("%d", &fruit[i]);
+	}
+	
+	for (i = 0; i < len_fruit; i++)
+	{
+		for (j = i+1; j < len_fruit; j++)
+		{
+			if (fruit[i] < fruit[j])
+			{
+				fruit_order[j]++;
+			}
+			else
+			{
+				fruit_order[i]++;
+			}
+		}
+	}
+	
+	for (i = 0; i < len_fruit; i++)
+	{
+		printf("%d번째 귤을 %d번째로 먹습니다.\n", i+1, fruit_order[i]+1);
+	}
+	
+	return 0;
+}		 	 
+```
 ## 4-2
-ㅇㄹ 
+
+```C
+#include <stdio.h>
+
+int main(void)
+{
+	int eat_fruit = 0;
+	int len_fruit = 0;
+	int fruit[100] = { 0, };
+	int fruit_order[100] = { 0, };
+	
+	scanf("%d %d", &eat_fruit, &len_fruit);
+	
+	int i = 0, j = 0;
+	for (i = 0; i < len_fruit; i++)
+	{
+		scanf("%d", &fruit[i]);
+	}
+	
+	for (i = 0; i < len_fruit; i++)
+	{
+		for (j = i+1; j < len_fruit; j++)
+		{
+			if (fruit[i] < fruit[j])
+			{
+				fruit_order[j]++;
+			}
+			else
+			{
+				fruit_order[i]++;
+			}
+		}
+	}
+	
+	for (i = 0; i < len_fruit; i++)
+	{
+		if (fruit_order[i] >= len_fruit - eat_fruit)
+		printf("%d번째 귤을 %d번째로 먹습니다.\n", i+1, fruit_order[i]+eat_fruit-len_fruit+1);
+	}
+	
+	return 0;
+}		 
+```
 ## 5-1
 ㅇㄹ 
 ## 5-2
