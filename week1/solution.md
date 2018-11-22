@@ -187,6 +187,7 @@ int main(void)
 }		 
 ```
 ## 5-1
+'''c
 #include <stdio.h>
 
 char one_encryption(char i)
@@ -209,5 +210,5 @@ int main(void)
 	
 	return 0;
 }
-
+'''
 ## 5-2
