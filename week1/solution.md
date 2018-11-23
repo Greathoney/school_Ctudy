@@ -102,12 +102,76 @@ int main(void)
 
 ## 3-1
 
-탕수육을 서로 번갈아 가면서 말하게 되는 탕수육 게임입니다.
+탕수육을 서로 번갈아 가면서 말하게 되는 탕수육 게임입니다. 탕수육의 배열을 이용하여 간단히 만들 수 있습니다.
+```C
+#include <stdio.h>
 
+int main(void){
+   int i=0, turn;
+   char input, tsy[] = {'t', 's', 'y'};
+   
+   turn = 1; //선공을 입력받습니다 
+   
+   //turn = 0; //후공을 입력 받습니다 
+   
+   while(1){
+      if(turn){
+         scanf(" %c", &input);
+         if(input!=tsy[i%3]){
+            printf("YOU LOSE\n");
+            break;
+         }
+         turn = 0;
+      } 
+      else{
+         printf("%c\n", tsy[i%3]);
+         turn = 1;
+      }
+      i++;
+   }
+   
+   return 0;
+}
+```
 
 ## 3-2
 
-ㅇㄹ 
+30턴이 넘으면 기권을 해야하므로 그 조건을 추가로 달아줍니다.
+```C
+#include <stdio.h>
+
+int main(void){
+   int i=0, turn;
+   char input, tsy[] = {'t', 's', 'y'};
+   
+   turn = 1; //선공을 입력받습니다 
+   
+   //turn = 0; //후공을 입력 받습니다 
+   
+   while(1){
+      if(i >= 30)
+      {
+         printf("YOU WIN\n");
+	 break;
+      }
+      if(turn){
+         scanf(" %c", &input);
+         if(input!=tsy[i%3]){
+            printf("YOU LOSE\n");
+            break;
+         }
+         turn = 0;
+      } 
+      else{
+         printf("%c\n", tsy[i%3]);
+         turn = 1;
+      }
+      i++;
+   }
+   
+   return 0;
+}
+```
 
 ## 4-1
 
@@ -204,7 +268,9 @@ int main(void)
 
 ## 5-1
 
-```c
+문자형과 정수형을 적절히 사용하여 작성합니다.
+
+```C
 #include <stdio.h>
 
 char one_encryption(char i)
@@ -228,5 +294,3 @@ int main(void)
 	return 0;
 }
 ```
-
-## 5-2
