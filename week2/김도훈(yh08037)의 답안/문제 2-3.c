@@ -19,7 +19,7 @@ int main(void)
 {
     int time;
 
-    printf("½Ã°£À» ÀÔ·ÂÇÏ¼¼¿ä. ");
+    printf("ì‹œê°„ì„ ì…ë ¥í•˜ì„¸ìš”. ");
     scanf("%d", &time);
     time %= 34;
 
