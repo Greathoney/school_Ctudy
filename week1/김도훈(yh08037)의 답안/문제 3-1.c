@@ -4,12 +4,13 @@ int main(void){
 	int i=0, turn;
 	char input, tsy[] = {'t', 's', 'y'};
 	
-	turn = 1; //¼±°øÀ» ÀÔ·Â¹Ş½À´Ï´Ù 
+	turn = 1; //ì„ ê³µì„ ì…ë ¥ë°›ìŠµë‹ˆë‹¤ 
 	
-	//turn = 0; //ÈÄ°øÀ» ÀÔ·Â ¹Ş½À´Ï´Ù 
+	//turn = 0; //í›„ê³µì„ ì…ë ¥ ë°›ìŠµë‹ˆë‹¤ 
 	
 	while(1){
 		if(turn){
+			printf("ì¬ì› : ");			
 			scanf(" %c", &input);
 			if(input!=tsy[i%3]){
 				printf("YOU LOSE\n");
@@ -18,7 +19,7 @@ int main(void){
 			turn = 0;
 		} 
 		else{
-			printf("%c\n", tsy[i%3]);
+			printf("ëŒ€í—Œ : %c\n", tsy[i%3]);
 			turn = 1;
 		}
 		i++;
