@@ -14,7 +14,7 @@ int main(void){
 	POINT *locationA, *locationB;
 	double areaA, areaB;
 
-	printf("AÀÇ ²ÀÁşÁ¡ÀÇ °³¼ö : ");
+	printf("Aì˜ ê¼­ì§“ì ì˜ ê°œìˆ˜ : ");
 	
 	scanf("%d", &numberA);
 
@@ -22,13 +22,13 @@ int main(void){
 
 
 	for(i=0; i<numberA; i++){
-		printf("%d¹øÂ° Á¡ : ", i+1); 
+		printf("%dë²ˆì§¸ ì  : ", i+1); 
 		scanf("%d", &(locationA+i)->x);
 		scanf("%d", &(locationA+i)->y);
 	}
 
 	
-	printf("\nBÀÇ ²ÀÁşÁ¡ÀÇ °³¼ö : ");
+	printf("\nBì˜ ê¼­ì§“ì ì˜ ê°œìˆ˜ : ");
 
 	scanf("%d", &numberB);
 
@@ -36,7 +36,7 @@ int main(void){
 
 
 	for(i=0; i<numberB; i++){
-		printf("%d¹øÂ° Á¡ : ", i+1); 
+		printf("%dë²ˆì§¸ ì  : ", i+1); 
 		scanf("%d", &(locationB+i)->x);
 		scanf("%d", &(locationB+i)->y);
 	}	
@@ -45,17 +45,17 @@ int main(void){
 	areaA = Area_Polygon(numberA, locationA);
 	areaB = Area_Polygon(numberB, locationB);
 
-	printf("\nAÀÇ ¿µ¿ª : %.1lf\nBÀÇ ¿µ¿ª : %.1lf\n\n", areaA, areaB);
+	printf("\nAì˜ ì˜ì—­ : %.1lf\nBì˜ ì˜ì—­ : %.1lf\n\n", areaA, areaB);
 	
 	
 	if(areaA>areaB){
-		printf("AÀÇ ¿µ¿ªÀÇ ³ĞÀÌ°¡ ´õ Å®´Ï´Ù.\n");
+		printf("Aì˜ ì˜ì—­ì˜ ë„“ì´ê°€ ë” í½ë‹ˆë‹¤.\n");
 	}
 	else if(areaA<areaB){
-		printf("BÀÇ ¿µ¿ªÀÇ ³ĞÀÌ°¡ ´õ Å®´Ï´Ù.\n");
+		printf("Bì˜ ì˜ì—­ì˜ ë„“ì´ê°€ ë” í½ë‹ˆë‹¤.\n");
 	}
 	else{
-		printf("A¿Í BÀÇ ¿µ¿ªÀÇ ³ĞÀÌ´Â °°½À´Ï´Ù.\n");
+		printf("Aì™€ Bì˜ ì˜ì—­ì˜ ë„“ì´ëŠ” ê°™ìŠµë‹ˆë‹¤.\n");
 	}
 	
 
