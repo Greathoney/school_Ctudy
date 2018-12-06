@@ -12,7 +12,7 @@
 
 체스판의 칸수는 총 64칸입니다. 준형이가 받게 될 쌀알의 톨수를 출력하세요.
 
-![http://kids.hankooki.com/lpage/edu/201807/kd2018070818010777380.htm](http://kids.hankooki.com/lpage/edu/201807/kd2018070818010777380.htm)
+http://kids.hankooki.com/lpage/edu/201807/kd2018070818010777380.htm
 
 <br>
 
